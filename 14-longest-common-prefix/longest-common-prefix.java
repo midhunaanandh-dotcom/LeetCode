@@ -1,6 +1,6 @@
 class Solution {
     public String longestCommonPrefix(String[] strs) {
-        String prefix = "";
+        StringBuilder prefix = new StringBuilder(); // Since String is immutable in java we use StringBuilder to occupy less memory
         String word1 = strs[0];
         int length = word1.length();
 
@@ -19,8 +19,8 @@ class Solution {
                     break outerloop;
                 }
             }
-            prefix += alph;
+            prefix.append(alph);
         }
-        return prefix;
+        return prefix.toString(); // .toString() converts object into a plain string
     }   
 }
