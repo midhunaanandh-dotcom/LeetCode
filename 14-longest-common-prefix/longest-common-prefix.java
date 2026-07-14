@@ -4,6 +4,11 @@ class Solution {
         String word1 = strs[0];
         int length = word1.length();
 
+        // Edge cases: when strs is null that is there's no String object and when the array is empty
+        if(strs == null || strs.length == 0){
+            return "";
+        }
+
         for(int i = 1; i < strs.length; i++){
             if(strs[i].length() < length){
                 length = strs[i].length();
