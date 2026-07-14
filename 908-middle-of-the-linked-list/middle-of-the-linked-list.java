@@ -14,7 +14,7 @@ class Solution {
         ListNode slow = head;
         while(fast != null && fast.next != null){
             slow = slow.next;
-            fast = fast.next.next;
+            fast = fast.next.next;// For even case the code doesn't crash even though fast.next.next is null
         }
         return slow;
     }
