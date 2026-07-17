@@ -24,7 +24,6 @@ class Solution {
             head.next = null;
             return head;
         }else{
-            System.out.println(mid);
             ListNode current = head;
             for(int i = 0; i < mid-1; i++){
                 current = current.next;
