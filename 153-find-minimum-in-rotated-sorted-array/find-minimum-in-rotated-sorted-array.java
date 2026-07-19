@@ -5,14 +5,10 @@ class Solution {
         int mid = 0;
         while(low < high){
             mid = (low+high)/2;
-            if(nums[high] > nums[mid]){
-                high = mid;
-            }else if(nums[high] < nums[mid]){
+            if(nums[mid] > nums[high]){
                 low = mid + 1;
-            }else if(nums[mid + 1] < nums[mid]){
-                return nums[mid+1];
             }else{
-                return nums[mid];
+                high = mid;
             }
         }
         return nums[high];
