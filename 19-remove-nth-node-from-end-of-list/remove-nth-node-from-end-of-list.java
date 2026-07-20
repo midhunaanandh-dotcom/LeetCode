@@ -21,7 +21,6 @@ class Solution {
             return null;
         }
         int k = length - n;
-        System.out.println(k);
         int count = 1;
         if(k == 0){
             return head.next;
