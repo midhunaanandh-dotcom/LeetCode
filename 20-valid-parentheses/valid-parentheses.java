@@ -22,7 +22,6 @@ class Solution {
                 }
             }
         }
-        if(top == -1) return true;
-        return false;
+        return (top == -1);
     }
 }
