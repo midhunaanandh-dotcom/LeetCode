@@ -1,17 +1,9 @@
 class Solution {
     public int singleNumber(int[] nums) {
-        boolean twinFound = false;
+        int num = 0;
         for(int i = 0; i < nums.length; i++){
-            int temp = nums[i];
-            twinFound = false;
-            for(int j = 0; j < nums.length; j++){
-                if(temp == nums[j] && i != j){
-                    twinFound = true;
-                    break;
-                }
-            }
-            if(!twinFound) return temp;
+            num ^= nums[i];
         }
-        return -1;
+        return num;
     }
 }
