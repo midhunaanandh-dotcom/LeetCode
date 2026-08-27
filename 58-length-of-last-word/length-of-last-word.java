@@ -9,12 +9,14 @@ class Solution {
                 if(s.charAt(i) != ' ') break;
                 else j++;
             }
-            for(int k = s.length() - 1 - j; k >= 0; k--){
-                if(s.charAt(k) != ' ') len++;
-                else break;
-            }
+            return calc(s, s.length() - j);
         }
-        for(int i = s.length() - 1; i >= 0; i--){
+        return calc(s, s.length());
+    }
+
+    public int calc(String s, int start){
+        int len = 0;
+        for(int i = start - 1; i >= 0; i--){
             if(s.charAt(i) != ' ') len++;
             else break;
         }
