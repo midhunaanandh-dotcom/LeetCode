@@ -9,7 +9,7 @@ class MyCircularQueue {
         this.capacity = k;
         this.queue = new int[k];
         this.head = 0;
-        this.tail = -1; // Initialized to -1 so the first enQueue puts it at index 0
+        this.tail = -1; 
         this.size = 0;
     }
     
@@ -17,7 +17,6 @@ class MyCircularQueue {
         if (isFull()) {
             return false;
         }
-        // Move tail forward circularly and insert
         tail = (tail + 1) % capacity;
         queue[tail] = value;
         size++;
@@ -28,7 +27,6 @@ class MyCircularQueue {
         if (isEmpty()) {
             return false;
         }
-        // Move head forward circularly to effectively "remove" the element
         head = (head + 1) % capacity;
         size--;
         return true;
