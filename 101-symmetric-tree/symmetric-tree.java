@@ -25,9 +25,7 @@ class Solution {
             return true;
         }
         if(root1 == null || root2 == null) return false;
-        if(root1.val == root2.val){
-            return chk(root1.left, root2.right) && chk(root1.right, root2.left);
-        }
-        return false;
+
+        return (root1.val == root2.val) && chk(root1.left, root2.right) && chk(root1.right, root2.left);
     }
 }
