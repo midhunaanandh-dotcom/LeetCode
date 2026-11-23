@@ -1,17 +1,14 @@
 class Solution {
     public boolean isHappy(int n) {
-        if(n == 1) return true;
-        int result = n;
-        int iter = 0;
-        while(result != 1){
-            result = getSum(result);
-            if(result == 1){
-                return true;
-            }
-            if(iter > 10) break;
-            iter++;
-        }
-        return false;        
+        int slow = n;
+        int fast = getSum(n);
+
+        while(fast != 1 && slow != fast){
+            slow = getSum(slow);
+            fast = getSum(getSum(fast));
+        }       
+
+        return fast == 1;
     }
     public int getSum(int n){
         int sum  = 0;
