@@ -15,10 +15,9 @@ class Solution {
     }
     public int getSum(int n){
         int sum  = 0;
-        int copy = n;
-        while(copy > 0){
-            sum += (copy%10) * (copy%10);
-            copy = copy/10;
+        while(n > 0){
+            sum += (n%10) * (n%10);
+            n = n/10;
         }   
         return sum;
     }
