@@ -8,7 +8,7 @@ class Solution {
             if(result == 1){
                 return true;
             }
-            if(iter > 1000) break;
+            if(iter > 100) break;
             iter++;
         }
         return false;        
